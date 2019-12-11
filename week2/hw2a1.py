@@ -9,3 +9,21 @@ table_dimensions_feet = {
 
 table_length_inches = feet_to_inches(table_dimensions_feet["length"])
 print(table_length_inches)
+
+
+#next part here
+
+price = (20, 6, 9, 14, 5)
+
+tax_percent = (0.13)
+
+def get_total(price, tax_percent):
+	total = price * (tax_percent + 1)
+	total_rounded = round(total, 2)
+	return total_rounded
+
+first_total = get_total(price[0], tax_percent)
+second_total = get_total(price[1], tax_percent)
+
+print("The first two totals are $" + str(first_total) + " and $" + str(second_total) + " respectively.")
+# The first two totals are $22.6 and $6.78 respectively.
